@@ -17,9 +17,9 @@ Here a simple pre-commit hook is available. What it does is follows:
 - if it does exist - read it - increment it and save it
 - if it does not exist - create it - write 0 and save it
 
-At best make sure there are no conflicts with files named version in the root of your git repository!
+*At best make sure there are no conflicts with files named version in the root of your git repository!*
 
-So you don't have to manually adjust your version number - maybe you want to create more a complex number? Maybe extend the complexity to be more useful still quite general, give a pull request. Cool updates are:
+Now you don't have to manually adjust your version number - maybe you want to create more a complex number? Maybe extend the complexity to be more useful still quite general, give a pull request. Cool updates are:
 
 - Using Semver
 - Incrementing the specific numbers on messages inside the commit message - like "update-major", or "update-minor" 
