@@ -4,7 +4,8 @@ use warnings;
 
 print "I am the pre-commit hook!\n";
 my $filename = "version";
-my $filepath = "../../";
+my $filepath = ""; # if we call git commit from root directory... :-S
+#my $filepath = "../../";
 my $openable = $filepath.$filename;
 print "to open: ".$openable."\n";
 unless(-e $openable) {
@@ -25,3 +26,5 @@ seek($file, 0, 0);
 truncate($file, tell($file));
 print $file $versionNumber;
 close $file;
+
+system("git add $filename;")

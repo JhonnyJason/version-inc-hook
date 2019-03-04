@@ -20,7 +20,7 @@ while ($hookName = readdir(DIR)) {
     ($symlinkName) = (split m/\./, $hookName)[0];
     print "give symlinkName: ".$symlinkName."\n";
 
-    system("ln -sf hooks/".$hookName." ../.git/hooks/".$symlinkName."\n");
+    system("ln -sf ../../git-hooks/hooks/".$hookName." ../.git/hooks/".$symlinkName."\n");
 }
 
 print "current Hooks:\n";
